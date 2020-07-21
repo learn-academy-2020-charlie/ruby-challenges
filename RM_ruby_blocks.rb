@@ -3,7 +3,7 @@
 # Write a loop that prints the numbers 1 to 20.
 # num = 1
 # while num <= 20
-#     puts num 
+#     puts num
 #     num += 1
 # end
 
@@ -40,7 +40,7 @@
 
 # nums_arr = [1, 2, 3, 4]
 
-# def mult_5 array 
+# def mult_5 array
 #     array.map do |value|
 #         value * 5
 #     end
@@ -52,7 +52,7 @@
 
 # names_arr = ['ryan', 'miguel', 'sarah', 'andee']
 
-# def capitalize array 
+# def capitalize array
 #     array.map! do |value|
 #         value.capitalize
 #     end
@@ -109,13 +109,34 @@
 
 #Challenge 10 Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
-given_arr = ['Apple', 'Avocado', 'Banana', 'Mango']
+# given_arr = ['Apple', 'Avocado', 'Banana', 'Mango']
+#
+# def particular_letter (array, letter)
+#      array.select do |value|
+#        value[0].downcase == letter.downcase
+#       # value.downcase.start_with?('a')
+#       # puts value
+#     end
+# end
+#
+# puts particular_letter given_arr, 'm'
 
-def particular_letter array, letter
-    new_arr = array.select do |value|
-        value.downcase
-        value[0] == letter
+#CHALLENGE FIZZBUZZ
+# Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+
+nums = [0..100]
+number = 0
+
+
+  while number < 100
+    if number % 3 == 0 && number % 5 == 0
+      puts 'FizzBuzz'
+    elsif number % 3 == 0
+      puts 'Fizz'
+    elsif number % 5 == 0
+      puts 'Buzz'
+    else
+      puts number
     end
-end
-
-puts given_arr, a
+      number += 1
+    end
