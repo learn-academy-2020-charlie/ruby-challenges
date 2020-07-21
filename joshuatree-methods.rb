@@ -1,8 +1,12 @@
-# Write a loop that prints the numbers 1 to 20.
-# Write a loop that prints the numbers 1 to 20 using a different approach than previously used.
-# Write a loop that prints only even numbers from 20 to 0.
-# Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
-# Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
+# Create a method that takes in an array of numbers and returns the largest number in the array.
+
+# Create a method that takes in an array of numbers and returns the smallest number in the array.
+
+# Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+
+# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
+
+# Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
 # num = 1
 # while num <= 20
@@ -15,7 +19,7 @@
 #     p value
 # end
 
-num = [*0..20]
+# num = [*0..20]
 # def only_evens array
 #     array.reverse.select do |value|
 #         value.even?
@@ -33,11 +37,52 @@ num = [*0..20]
 # p times_five num
 
 
-words = ["orange", "car", "dog", "lemonade"]
-def to_upper array
-    array.map! do |value|
-        value.upcase
-    end
-end
+# words = ["orange", "car", "dog", "lemonade"]
+# def to_upper array
+#     array.map! do |value|
+#         value.upcase
+#     end
+# end
 
-p to_upper words
+# p to_upper words
+
+num_array = [34, 653, 2, 67, 34]
+
+# p num_array.max
+# p num_array.min
+
+# def odd_least_to_great array
+#     array.sort.select do |value|
+#         value.odd?
+#     end
+# end
+
+# p odd_least_to_great num_array
+
+# name = ['Cynthia', 'Ryan', 'Miguel', "Selam"]
+
+# def reverse_casing array
+#     array.map do |value|
+#         value.split('').map do |value|
+#         if value == value.upcase
+#             value.downcase
+#             else
+#             value.upcase
+#         end
+#     end
+#     end
+# end
+
+# p reverse_casing name
+
+
+
+
+# if index is lowercacase return uppercase 
+# if index is uppercase return lowercase
+
+
+
+
+
+
