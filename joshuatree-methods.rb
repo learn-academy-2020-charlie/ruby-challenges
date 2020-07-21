@@ -1,13 +1,3 @@
-# Create a method that takes in an array of numbers and returns the largest number in the array.
-
-# Create a method that takes in an array of numbers and returns the smallest number in the array.
-
-# Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
-
-# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
-
-# Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
-
 # num = 1
 # while num <= 20
 #     p num
@@ -75,31 +65,66 @@
 
 # p reverse_casing name
 
+# fruits_array = ['Apple', 'Avocado', 'Banana', 'Mango']
 
+# def return_letter (array, letter)
+#     array.select do |value| 
+#         value.split('')[0] == letter
+#     end
+# end
 
+# p return_letter fruits_array, 'A'
+
+# Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+
+# numbers = [*1..100]
+
+# def fizzbuzz array
+#     array.map do |value|
+#         if value % 3 == 0 && value % 5 == 0
+#         value = 'fizzbuzz'
+#         elsif value % 3 == 0
+#         value = 'fizz'
+#         elsif value % 5 == 0
+#         value = 'buzz'
+#         else
+#             value
+#         end
+#     end
+# end
+
+# p fizzbuzz numbers
 
 # if index is lowercacase return uppercase 
 # if index is uppercase return lowercase
 
-class Task
-    def initialize title
-        @title = title
-        @status = "not clean"
-    end
-    def set_info description
-        @description = description
-    end
-    def set_state status
-        @status = status
-    end
-    def get_info
-        "#{@title} : #{@description} : #{@status}"
-    end
+# class Task
+#     def initialize title
+#         @title = title
+#         @status = "not clean"
+#     end
+#     def set_info description
+#         @description = description
+#     end
+#     def set_state status
+#         @status = status
+#     end
+#     def get_info
+#         "#{@title} : #{@description} : #{@status}"
+#     end
+# end
+
+# cleaned_my_room = Task.new 'Cleaned My Room'
+
+# cleaned_my_room.set_info 'Make bed, pick up clothes, vacuum'
+# p cleaned_my_room.get_info
+# cleaned_my_room.set_state 'cleaned room'
+
+
+class Car 
+    def initialize (model, year)
+        @model = 'generic car'
+        @year =  'my_car year'
 end
 
-cleaned_my_room = Task.new 'Cleaned My Room'
-
-cleaned_my_room.set_info 'Make bed, pick up clothes, vacuum'
-p cleaned_my_room.get_info
-cleaned_my_room.set_state 'cleaned room'
-
+my_car = Car.new
