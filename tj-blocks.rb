@@ -36,10 +36,39 @@
 
 # Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
 
-lower_case_array = ['snake','bear','fish','zebra']
-def capitalization array 
-     array.each do |value|
-        value.capitalize!
-   end 
+# lower_case_array = ['snake','bear','fish','zebra']
+# def capitalization array 
+#      array.each do |value|
+#         value.capitalize!
+#    end 
+# end
+# p capitalization lower_case_array
+
+#Create a method that takes in an array of numbers and returns the largest number in the array.
+
+# def get_greatest_num array
+#    array.each do |value, index|
+#       if index - 1 == array.length
+#          largest_num
+#       elsif value < array[index + 1]
+#          largest_num = array[index + 1]
+#       end 
+#       largest_num
+#    end
+# end
+
+my_array = [1, 5, 9001, 512, -300, 0 ]
+
+def greatest_num array
+   counter = 0
+   my_greatest_num = 0
+   while counter < array.length
+      if array[counter] < array[counter + 1] 
+         my_greatest_num = array[counter + 1] 
+         counter += 1
+      end
+   end
+   my_greatest_num
 end
-p capitalization lower_case_array
+
+p greatest_num my_array 
