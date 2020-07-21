@@ -46,7 +46,7 @@
 
 # p to_upper words
 
-num_array = [34, 653, 2, 67, 34]
+# num_array = [34, 653, 2, 67, 34]
 
 # p num_array.max
 # p num_array.min
@@ -81,8 +81,25 @@ num_array = [34, 653, 2, 67, 34]
 # if index is lowercacase return uppercase 
 # if index is uppercase return lowercase
 
+class Task
+    def initialize title
+        @title = title
+        @status = "not clean"
+    end
+    def set_info description
+        @description = description
+    end
+    def set_state status
+        @status = status
+    end
+    def get_info
+        "#{@title} : #{@description} : #{@status}"
+    end
+end
 
+cleaned_my_room = Task.new 'Cleaned My Room'
 
-
-
+cleaned_my_room.set_info 'Make bed, pick up clothes, vacuum'
+p cleaned_my_room.get_info
+cleaned_my_room.set_state 'cleaned room'
 
