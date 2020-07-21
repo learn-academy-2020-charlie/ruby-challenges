@@ -52,7 +52,7 @@ end
 
 
 # ----ERICA drives
-# Create a method that takes in an array of numbers and returns the largest number in the array.
+# (6) Create a method that takes in an array of numbers and returns the largest number in the array.
 randomArr = [19, 0, 8, 31, 12]
 
 def findLargest array
