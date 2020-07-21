@@ -36,8 +36,8 @@ def mult_five array
         value * 5
     end
 end
-p magic_numbs
-p mult_five magic_numbs
+# p magic_numbs
+# p mult_five magic_numbs
 
 # (5) Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
 
@@ -47,12 +47,34 @@ def capitalizers array
         value.capitalize
     end
 end
-p capitalizers magic_words
-p magic_words
+# p capitalizers magic_words
+# p magic_words
 
 
 # ----ERICA drives
 # Create a method that takes in an array of numbers and returns the largest number in the array.
+randomArr = [19, 0, 8, 31, 12]
+
+def findLargest array
+    array.max
+end
+
+# p findLargest randomArr
+
+
+def findLargest2 array
+    # use select to filter the array and only return one value, the highest
+    maxValue = array[0]
+    array.select do |value|
+        value > maxValue
+        maxValue = value
+    end
+    maxValue
+end
+
+p findLargest2 randomArr
+
+
 # Create a method that takes in an array of numbers and returns the smallest number in the array.
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
 # Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
