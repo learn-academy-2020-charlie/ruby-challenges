@@ -1,7 +1,7 @@
 # User Stories
 # Story: As a developer, I can create a Task.
 class Tasks
-    def initialize title, description
+    def initialize (title, description)
         # Story: As a developer, I can give a Task a title and retrieve it.
         @title = title
         # Story: As a developer, I can give a Task a description and retrieve it.
@@ -10,7 +10,7 @@ class Tasks
     end
     
     # Story: As a developer, I can mark a Task done.
-    def set_status(status)
+    def set_status status
         @status = status
     end
 
@@ -30,10 +30,10 @@ task_1 = Tasks.new "Car", "Oil change"
 task_1.set_status "being worked on now"
 puts task_1.show_task_info
 
-#Selam Driving----------------------------------------------------------------------------------------------
+#--------Selam Driving----------------------------------------------------------------------------------------------
 
 class Taskslist
-    def initialize title, description, date
+    def initialize (title, description, date)
         # Story: As a developer, I can give a Task a title and retrieve it.
         @title = title
         # Story: As a developer, I can give a Task a description and retrieve it.

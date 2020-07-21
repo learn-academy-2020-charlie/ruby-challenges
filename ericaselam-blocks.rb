@@ -51,7 +51,7 @@ end
 # p magic_words
 
 
-# ----ERICA drives
+# ----ERICA drives----------------------------------------------------------------------------
 # (6) Create a method that takes in an array of numbers and returns the largest number in the array.
 randomArr = [19, 0, 8, 31, 12]
 
@@ -66,14 +66,13 @@ def findLargest2 array
     # use select to filter the array and only return one value, the highest
     maxValue = array[0]
     array.select do |value|
-        value > maxValue
-        maxValue = value
+        if value > maxValue
+            maxValue = value
+        end
     end
-    maxValue
-end
+    end
 
-p findLargest2 randomArr
-
+puts findLargest2 randomArr
 
 # Create a method that takes in an array of numbers and returns the smallest number in the array.
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
