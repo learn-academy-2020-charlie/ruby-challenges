@@ -57,18 +57,62 @@
 #    end
 # end
 
-my_array = [1, 5, 9001, 512, -300, 0 ]
+# def greatest_num array
+#    counter = 0
+#    my_greatest_num = array[0]
+#    while counter < array.length-1
+#       if my_greatest_num < array[counter] 
+#          my_greatest_num = array[counter] 
+#       end
+#       counter += 1
+#    end
+#    my_greatest_num
+# end
 
-def greatest_num array
-   counter = 0
-   my_greatest_num = 0
-   while counter < array.length
-      if array[counter] < array[counter + 1] 
-         my_greatest_num = array[counter + 1] 
-         counter += 1
-      end
-   end
-   my_greatest_num
-end
+# puts greatest_num(my_array) 
 
-p greatest_num my_array 
+
+# def smallest_num array
+#    my_greatest_num = array.min
+#    my_greatest_num
+# end
+
+# puts smallest_num my_array 
+
+# my_array = [1, 5, 9001, 512, -300, 8 ]
+# #Declare a function that takes in any array
+# def get_odds array
+# #Retrieve all the odd numbers from the array
+#    my_odd_array = array.select do |value|
+#       value % 2 != 0
+#    end
+#    #Order the odd numbers from least to greatest
+#    my_odd_array.sort
+# end
+
+# p get_odds my_array
+test_array = ['hI', 'hElLo', 'whOOps', 'aDIOs']
+
+def reverse_case array
+#need a method to iterate through the array
+   switched_case_array = array.map do |word|
+   #need to be able to identify the case of each letter
+      letter_array = word.split('')
+   #need to switch the case of the letter and return the new letter
+      switched_case_letter_array = letter_array.map do |letter|
+         if letter == letter.capitalize
+            letter.downcase!
+         elsif letter == letter.downcase
+            letter.upcase!
+         end # ends if tree
+         letter
+      end #ends the letter_array map
+      new_word = switched_case_letter_array.join('')
+   end #ends the array.map
+end #ends the whole method
+
+p reverse_case test_array
+
+
+
+
