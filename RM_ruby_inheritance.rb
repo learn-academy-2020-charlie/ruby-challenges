@@ -1,6 +1,6 @@
 # Story: As a programmer, I can make a car. Hint: Create a class called Car, and create a variable called my_car which contains an object of class Car.
 
-class Car 
+class Car
     def initialize (model = 'generic car' , year = 'my_car year')
         @model = model
         @year = year
@@ -12,23 +12,23 @@ class Car
         @brake = 5
     end
     # create a method to return the number of wheels.
-    def num_of_wheels 
+    def num_of_wheels
         puts "Wheels: #{@wheels}"
     end
 
     def lightswitch
         if @lights == 'off'
             @lights = 'on'
-        else 
+        else
             @lights = 'off'
         end
     end
 
-    def turn_signal 
+    def turn_signal
         puts 'Turn Signals: type "left", "right" or "off"'
         @signal = gets
     end
-    
+
     def stop
         @mph = 0
     end
@@ -45,11 +45,11 @@ class Car
     end
 
     # make a method that accelerates and brakes
-    def gas_or_brake 
+    def gas_or_brake
         # ask if they want to press on the gas or brakes
         puts 'do you want to step on "gas" or "brakes"?'
         # gets = gas or brakes.
-        input = gets 
+        input = gets
         input
         # if gas add @acceleration
         if input == 'gas'
@@ -60,19 +60,19 @@ class Car
         end
     end
 
-    def car_info 
+    def car_info
         puts "The car is a #{@year} #{@model}: it has #{@wheels} wheels. The lights are #{@lights}. Turn signal is set to #{@signal}. It is currently moving at #{@mph}mph."
     end
 end
 
-#####THIS IS THE CALLS 
+#####THIS IS THE CALLS
 
 my_car = Car.new 'generic car', 'generic year'
 # puts my_car.car_info
 
 my_tesla = Car.new 'Model X', '2020'
 
-# puts my_tesla.car_info
+puts my_tesla.car_info
 
 my_toyota = Car.new 'Camry', '2012'
 
@@ -94,5 +94,3 @@ my_honda = Car.new 'Accord', '2017'
 # my_tesla.gas_or_brake
 
 # puts my_tesla.car_info
-
-
