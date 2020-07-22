@@ -32,6 +32,16 @@
 
 # Story: As a programmer, I can slow my Teslas down by 7 per braking.
 
+# Story: As a programmer, I can speed my Toyotas up by 7 per acceleration.
+
+# Story: As a programmer, I can slow my Toyotas down by 5 per braking.
+
+# Story: As a programmer, I can speed my Hondas up by 5 per acceleration.
+
+# Story: As a programmer, I can slow my Hondas down by 2 per braking.
+
+# Story: As a programmer, I can call upon a car to tell me all its information. Hint: Implement to_s on one or more classes. You can call a super class's to_s with super.
+
 
 class Car
     def initialize (model, year)
@@ -66,6 +76,14 @@ class Car
     def get_signal
         "Signal is #{@signal}."
     end
+
+    def get_speed
+        "Speed is: #{@speed}mph"
+    end
+
+    def get_info
+        "This #{@year} #{@model} has #{@wheels} wheels, it's lights are #{@lights}, turn signal is #{@signal}. Finally, it is moving at #{@speed} mph."
+    end
 end
 
 class Tesla < Car
@@ -77,10 +95,6 @@ class Tesla < Car
         @speed += 10
     end
 
-    def get_speed
-        "Speed is: #{@speed}mph"
-    end
-
     def set_slow_down
         @speed -= 7
     end
@@ -90,13 +104,31 @@ class Toyota < Car
     def initialize (model, year)
         super model, year
     end
+
+    def set_speed_up
+        @speed += 7
+    end
+
+    def set_slow_down
+        @speed -= 5
+    end
+
 end
 
 class Honda < Car
     def initialize (model, year)
         super model, year
     end
+
+    def set_speed_up
+        @speed += 5
+    end
+
+    def set_slow_down
+        @speed -= 2
+    end
 end
+
 # my_car = Car.new 'generic_car', 'my_car_year'
 
 my_tesla = Tesla.new 'Tesla truck', 2020
@@ -119,7 +151,7 @@ my_honda = Honda.new 'Civic', 1996
 
 # puts my_tesla.get_speed
 
-# my_tesla.set_speed_up
+my_tesla.set_speed_up
 
 # puts my_tesla.get_speed
 
@@ -127,3 +159,13 @@ my_honda = Honda.new 'Civic', 1996
 
 # puts my_tesla.get_speed
 
+my_toyota.set_speed_up
+
+# puts my_toyota.get_speed
+
+my_toyota.set_slow_down
+
+# puts my_toyota.get_speed
+
+puts my_toyota.get_info
+puts my_tesla.get_info
