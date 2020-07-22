@@ -167,8 +167,27 @@ my_toyota.set_slow_down
 
 # puts my_toyota.get_speed
 
+<<<<<<< HEAD
 puts my_toyota.get_info
 puts my_tesla.get_info
 
 
 # As a developer I'm given a multidigit number, write a function that takes in that number and returns an array with each digit
+=======
+# puts my_toyota.get_info
+# puts my_tesla.get_info
+
+# As a programmer, I can keep a collection of two of each kind of car model, all from different years. Hint: Create two of each vehicles, all from different model years, and put them into an array.
+
+my_tesla_2 = Tesla.new 'Model T', 2018
+
+# my_tesla.get_wheels
+
+my_toyota_2= Toyota.new 'Prius', 2006
+
+my_honda_2 = Honda.new 'Pilot', 2012
+
+cars = []
+cars << my_tesla
+puts cars
+>>>>>>> 7ecf874e44a93b28e77a7ff139cbebd5ffb14770
