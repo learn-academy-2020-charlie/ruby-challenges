@@ -182,4 +182,4 @@ my_honda_2 = Honda.new 'Pilot', 2012
 
 cars = []
 cars << my_tesla
-puts cars
+#puts cars
