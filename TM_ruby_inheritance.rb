@@ -9,7 +9,8 @@ class Car
         @lights = 'off'
         @signal = 'off'
     end
-
+    
+    #Getters
     def get_wheels 
         @wheels
     end
@@ -22,14 +23,15 @@ class Car
         @mph
     end
 
+    #Setters
     def set_acceleration
         puts 'enter acceleration'
-        @acceleration = gets
+        @acceleration = gets.to_i
     end
 
     def set_brake
         puts 'enter brake'
-        @brake = gets
+        @brake = gets.to_i
     end
 
     def set_lights
@@ -40,6 +42,19 @@ class Car
     def set_signal
         puts 'turn signals: "off" "left" or "right"?'
         @signal = gets.downcase
+    end
+
+    #Other Methods
+    def change_speed
+        puts "Type 'gas' to speed up \nType 'brake' to slow down"
+        user_input = gets.chomp.downcase
+        if user_input == 'gas'
+            @mph = @mph + @acceleration
+        elsif user_input == 'brake'
+            @mph = @mph - @brake
+        else 
+            puts 'Not a valid input'
+        end
     end
 
 end
@@ -56,7 +71,10 @@ end
 
 my_tesla = Tesla.new('Model S', '2020')
 
-# my_tesla.set_acceleration
-my_tesla.set_signal
+my_tesla.set_acceleration
+my_tesla.set_brake
+my_tesla.change_speed
+my_tesla.change_speed
 puts my_tesla.get_info
+
 
