@@ -120,11 +120,28 @@
 # p cleaned_my_room.get_info
 # cleaned_my_room.set_state 'cleaned room'
 
+# Story: As a programmer, I can tell how many wheels a car has. The default is four. Hint: initialize the car to have four wheels, then create a method to return the number of wheels.
+
+# Story: As a programmer, I can make a Tesla car. Hint: Create an variable called my_tesla which is an instance of class Tesla which inherits from class Car.
+
+# Story: As a programmer, I can give my Tesla a model on initialization.
+
+# Story: As a programmer, I can give my Tesla a year on initialization.
+
+# Story: As a programmer, I can make a Toyota car.
+
+# Story: As a programmer, I can give my Toyota a model on initialization.
+
+# Story: As a programmer, I can give my Toyota a year on initialization.
+
+# Story: As a programmer, I can make a Honda car.
+
 
 class Car 
     def initialize (model, year)
         @model = 'generic car'
         @year =  'my_car year'
+        @wheels = 4
 end
 
 my_car = Car.new
