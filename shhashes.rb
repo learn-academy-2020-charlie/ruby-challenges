@@ -45,23 +45,23 @@
 
 # blocks ~ iterables
 
-# times method with do/end block
-# times is a very simple iritable that executes block a specified number of times
-# 5. times do
-#     p "hello"
-# end
+times method with do/end block
+times is a very simple iritable that executes block a specified number of times
+5. times do
+    p "hello"
+end
 
-# curly braces block
-# 5.times {p 'hello'}
+curly braces block
+5.times {p 'hello'}
 
-# add one to a number for each iteration
-# my_num = 5
-# my_num.times do
-#    puts 'hello'
-# end
-# 10.times do 
-#     my_num +=1
-# end
+add one to a number for each iteration
+my_num = 5
+my_num.times do
+   puts 'hello'
+end
+10.times do 
+    my_num +=1
+end
 
 # each (it uses an object's length to determine how many times to run) iterates through object/array/hash
 
@@ -76,39 +76,39 @@
 #     p value * 3
 # end
 
-# while loop 
-# numb = 1
-# while num <= 10
-#     p numb
-#     numb += 1
-# while that condition is not met the while loop will continue to iterate until it meets the condition. In this case the variable starts at 1 and increase in increments of 1 and while has denoted that it'll iterate until the variable numb has reached 10
+while loop 
+numb = 1
+while num <= 10
+    p numb
+    numb += 1
+while that condition is not met the while loop will continue to iterate until it meets the condition. In this case the variable starts at 1 and increase in increments of 1 and while has denoted that it'll iterate until the variable numb has reached 10
 
-# ranges/ beginning and end of value of range separated by two dots
-# range = 1..5
-# range.each do |value|
-#     p value
-# end
+ranges/ beginning and end of value of range separated by two dots
+range = 1..5
+range.each do |value|
+    p value
+end
 
 # my_range = 'a'..'m'
 # my_range.each do |value|
 #     p value
 # end
 
-# you can also create a range in an array
-# letters = Array('a'..'d')
-# puts letters
-# --> a, b, c, d
+you can also create a range in an array
+letters = Array('a'..'d')
+puts letters
+--> a, b, c, d
 
 nums_range = [*1..10]
 # nums_range
 
-# nums_range.each do |value|
-#     if value%2==0
-#         p 'even'
-#     else
-#         p value
-#     end
-# end
+nums_range.each do |value|
+    if value%2==0
+        p 'even'
+    else
+        p value
+    end
+end
 
 # same output
 # nums_range.each do |value|

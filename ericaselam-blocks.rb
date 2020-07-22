@@ -51,31 +51,85 @@ end
 # p magic_words
 
 
-# ----ERICA drives
+# ----ERICA drives-----------------------------------------------
 # (6) Create a method that takes in an array of numbers and returns the largest number in the array.
-randomArr = [19, 0, 8, 31, 12]
+# random_arr = [19, 0, 22, 8, 27, 500, -35,  31, 30, 12]
 
-def findLargest array
+def find_largest array
     array.max
 end
 
-# p findLargest randomArr
+# p find_largest randomArr
 
 
-def findLargest2 array
+def find_largest_2 array
     # use select to filter the array and only return one value, the highest
     maxValue = array[0]
-    array.select do |value|
-        value > maxValue
-        maxValue = value
+    new_array = array.select do |value|
+        if value > maxValue
+            maxValue = value
+        end
     end
-    maxValue
+    new_array.last
 end
 
-p findLargest2 randomArr
+# p find_largest_2 random_arr
+
+# (7) Create a method that takes in an array of numbers and returns the smallest number in the array.
+def find_smallest array
+    array.min
+end
+
+# p find_smallest random_arr
 
 
-# Create a method that takes in an array of numbers and returns the smallest number in the array.
-# Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
-# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
-# Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
+def find_smallest_2 array
+    # use select to filter the array and only return one value, the lowest
+    minValue = array[0]
+    new_arr = array.select do |value|
+        if value < minValue
+            minValue = value
+        end
+    end
+    new_arr.last
+end
+
+# p find_smallest_2 random_arr
+
+# (8) Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+
+random_arr = [19, 0, 22, 8, 27, 500, -35,  31, 30, 12]
+
+def sort_odd array
+    array.select { |value| value % 2 != 0 }.sort
+end
+
+# p sort_odd random_arr
+
+
+# (9) Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
+
+words_array = [ 'Happy', 'erica', 'selaM', 'GO', 'tEAm']
+# exepcted ouput = ['hAPPY', 'ERICA', 'SELAm', 'go', 'TeaM']
+
+def reverse_casing array
+    # loop through every word in the array (use .map) and swapcase to every word
+    array.map {|value| value.swapcase} 
+end
+
+# p reverse_casing words_array
+
+# (10) Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
+
+fruit_array = ['Apple', 'Avocado', 'Banana', 'Mango'] 
+
+# create a method that takes in an array and a  starting letter
+def find_start_letter (array, letter)
+    # loop through the array to look for words that start with the letter (use select) 
+    new_arr_2 = array.select do |value|
+        value.downcase.slice(0) == letter.downcase
+    end
+    new_arr_2
+end
+
+p find_start_letter fruit_array, 'b'
