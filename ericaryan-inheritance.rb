@@ -169,3 +169,6 @@ my_toyota.set_slow_down
 
 puts my_toyota.get_info
 puts my_tesla.get_info
+
+
+# As a developer I'm given a multidigit number, write a function that takes in that number and returns an array with each digit
