@@ -91,28 +91,69 @@
 # end
 
 # p get_odds my_array
-test_array = ['hI', 'hElLo', 'whOOps', 'aDIOs']
+# test_array = ['hI', 'hElLo', 'whOOps', 'aDIOs']
 
-def reverse_case array
-#need a method to iterate through the array
-   switched_case_array = array.map do |word|
-   #need to be able to identify the case of each letter
-      letter_array = word.split('')
-   #need to switch the case of the letter and return the new letter
-      switched_case_letter_array = letter_array.map do |letter|
-         if letter == letter.capitalize
-            letter.downcase!
-         elsif letter == letter.downcase
-            letter.upcase!
-         end # ends if tree
-         letter
-      end #ends the letter_array map
-      new_word = switched_case_letter_array.join('')
-   end #ends the array.map
-end #ends the whole method
+# def reverse_case array
+# #need a method to iterate through the array
+#    switched_case_array = array.map do |word|
+#    #need to be able to identify the case of each letter
+#       letter_array = word.split('')
+#    #need to switch the case of the letter and return the new letter
+#       switched_case_letter_array = letter_array.map do |letter|
+#          if letter == letter.capitalize
+#             letter.downcase!
+#          elsif letter == letter.downcase
+#             letter.upcase!
+#          end # ends if tree
+#          letter
+#       end #ends the letter_array map
+#       new_word = switched_case_letter_array.join('')
+#    end #ends the array.map
+# end #ends the whole method
 
-p reverse_case test_array
+# p reverse_case test_array
 
+# Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
+# array = ['Apple', 'Avocado', 'Banana', 'Mango']
+
+# # method that takes in multiple parameters (array and letter input)
+# def letter_match (array, letter) 
+# # use select to check if the first inex of a string matches our index call
+#     new_array = array.select do |value|
+#         value[0].upcase == letter.upcase
+#     end 
+#     new_array
+# end 
+
+# p letter_match array, 'b'
+
+# Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+
+# create range method that prints 1 -100
+def fizz_buzz 
+# assign a variable for the range
+    num_array = Array (1..100)
+# itterate throught he range 
+    fizz_buzz_array = num_array.map do |value, index|
+# at each value check to see if it is divisble by 3, 5, or both
+        if value % 3 == 0 && value % 5 == 0
+# assign a return for each value
+            'FizzBuzz'
+        elsif value % 3 == 0 
+# assign a return for each value
+            'Fizz'
+        elsif value % 5 == 0
+# assign a return for each value
+            'Buzz'
+        else 
+# assign a return for each value 
+            value
+        end
+    end
+    fizz_buzz_array
+end
+# call the method
+puts fizz_buzz
 
 
