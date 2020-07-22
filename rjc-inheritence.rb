@@ -7,14 +7,35 @@ class Car
         @year=year
 # Story: As a programmer, I can tell how many wheels a car has. The default is four. Hint: initialize the car to have four wheels, then create a method to return the number of wheels.
         @wheels=4
+        # Story: As a programmer, I can turn on and off the lights in my cars. Lights start in the off position.
+        @lights = 'off'
+        # Story: As a programmer, I can signal left and right. Turn signals starts off.
+        @signal = 'off'
     end
     def show_wheels 
-        puts "wheels: #{@wheels}"
+        "wheels: #{@wheels}"
+    end
+    def light_switch
+        if @lights == 'off'
+            @lights = 'on'
+        else @lights = 'off'
+        end
+    end
+    def show_light_switch
+        "light switch: #{@lights}"
+    end
+    def turn_signal
+        puts 'turns signal: type "left, right, off"'
+        @signal = gets
+    end
+    def show_turn_signal
+        "turn signal: #{@turn_signal}"
     end
 end 
 
 my_car = Car.new
-my_car.show_wheels
+puts my_car.show_wheels
+puts my_car.show_light_switch
 
 # Story: As a programmer, I can make a Tesla car. Hint: Create an variable called my_tesla which is an instance of class Tesla which inherits from class Car.
 class Tesla < Car
@@ -31,27 +52,41 @@ class Tesla < Car
 end
 
 my_tesla = Tesla.new 'Model X', '2020'
-puts my_tesla.show_tesla
-
-
-
+# puts my_tesla.show_tesla
 
 
 # Story: As a programmer, I can make a Toyota car.
+class Toyota < Car
+    def initialize (model, year)
+        super()
+        # Story: As a programmer, I can give my Toyota a model on initialization.
+        @model = model
+        # Story: As a programmer, I can give my Toyota a year on initialization.
+        @year = year
+    end
+end
 
-# Story: As a programmer, I can give my Toyota a model on initialization.
+my_toyota = Toyota.new 'Camry', '1998'
 
-# Story: As a programmer, I can give my Toyota a year on initialization.
 
 # Story: As a programmer, I can make a Honda car.
+class Honda < Car
+    def initialize (model, year)
+        super()
+        # Story: As a programmer, I can give my Honda a model on initialization.
+        @model = model
+        # Story: As a programmer, I can give my Honda a year on initialization.
+        @year = year
+    end
+end
 
-# Story: As a programmer, I can give my Honda a model on initialization.
+my_honda = Honda.new 'Civic', '1989'
 
-# Story: As a programmer, I can give my Honda a year on initialization.
 
-# Story: As a programmer, I can turn on and off the lights in my cars. Lights start in the off position.
 
-# Story: As a programmer, I can signal left and right. Turn signals starts off.
+
+
+
 
 # Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
 
